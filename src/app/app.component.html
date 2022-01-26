@@ -4,6 +4,13 @@
     <div *ngIf="showWeatherInCity">
         <p>The weather is now : {{ weather }} ℃</p>
     </div>
+    <ng-select [(ngModel)]="selectedCity">
+    <ng-option *ngFor="let city of cities" >{{city}}</ng-option>
+    </ng-select>
+    <ng-select [items]="cities" 
+          
+           [(ngModel)]="selectedCity">
+     </ng-select>
       <ol>
       <li *ngFor="let city of cities">{{city}} 
       <button (click)="showWeather(city)" >GET Weather</button>

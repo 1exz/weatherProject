@@ -48,6 +48,7 @@ export class AppComponent {
           this.weather = data.tp;
           console.log(this.weather)
         });
+        console.log(this.weather);
 
   }
 
